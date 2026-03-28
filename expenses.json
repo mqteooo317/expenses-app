@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Hamburguesa",
+    "amount": 1,
+    "category": "Comida",
+    "date": 1774718569501
+  },
+  {
+    "id": 2,
+    "title": "Pizza",
+    "amount": 5,
+    "category": "Comida",
+    "date": 1774718579706
+  }
+]

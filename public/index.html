@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Personal Finance</p>
+        <h1>Gastos</h1>
+      </div>
+
+      <button id="openModal" class="add-btn" aria-label="Añadir gasto">
+        <span>+</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <p class="hero-label">Total gastado</p>
+        <h2 id="total">$0</h2>
+      </div>
+      <div class="hero-card hero-card-small">
+        <p class="hero-label">Estado</p>
+        <h3>Control limpio</h3>
+      </div>
+    </section>
+
+    <main class="content">
+      <div class="section-title">
+        <h2>Movimientos</h2>
+        <p>Revisa y administra tus gastos</p>
+      </div>
+
+      <ul id="list" class="expense-list"></ul>
+    </main>
+  </div>
+
+  <button id="fab" class="fab" aria-label="Añadir gasto">+</button>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Nuevo gasto</h2>
+        <button id="closeModal" class="icon-btn" aria-label="Cerrar">×</button>
+      </div>
+
+      <form id="expenseForm" class="expense-form">
+        <label>
+          <span>Título</span>
+          <input type="text" id="title" placeholder="Ej. Hamburguesa" required>
+        </label>
+
+        <label>
+          <span>Monto</span>
+          <input type="number" id="amount" placeholder="Ej. 3500" required>
+        </label>
+
+        <label>
+          <span>Categoría</span>
+          <input type="text" id="category" placeholder="Ej. comida" required>
+        </label>
+
+        <button type="submit" class="submit-btn">Guardar gasto</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <button id="infoBtn" class="info-btn" aria-label="Abrir información">i</button>
+
+    <div id="infoPanel" class="info-panel hidden">
+      <div class="info-panel-inner">
+        <p class="info-title">Links</p>
+
+        <a class="link-pill" href="https://discord.com/users/1279870617197482055" target="_blank" rel="noreferrer">
+          Discord
+        </a>
+        <a class="link-pill" href="https://github.com/mqteooo317" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+        <a class="link-pill" href="https://github.com/mqteooo317/expenses-app" target="_blank" rel="noreferrer">
+          Repositorio
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
